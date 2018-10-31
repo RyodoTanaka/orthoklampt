@@ -26,3 +26,6 @@ dep-lemon:
 dep-ompl:
 	cd omplapp; mkdir -p build/Release;
 	cd omplapp/build/Release; cmake ../..; make -j`nproc`; sudo make install
+
+clear:
+	sudo rm -rf Klampt lemon* omplapp
