@@ -18,8 +18,8 @@ $ source pre-requirement.bash
 #### 2. Build Libraries
 ```bash
 $ cd <orthoklampt>/Library
-$ make unpack-deps
-$ make deps
+$ make -j`nproc` unpack-deps
+$ make -j`nproc` deps
 ```
 
 #### 3. Build orthoklampt itself
