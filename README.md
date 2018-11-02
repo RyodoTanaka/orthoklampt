@@ -34,6 +34,6 @@ $ sudo make install
 
 ### Execution
 ```bash
-$ cd <orthokoampt>
-$ ./build/planner_hierarchy ./data/experiments/06D_doubleLshape.xml
+$ cd <orthokoampt>/build
+$ ./planner_hierarchy ../data/experiments/06D_doubleLshape.xml
 ```
