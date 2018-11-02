@@ -1,20 +1,39 @@
-<h3>Dependencies</h3>
+### Dependencies
 
-<ul>
-  <li> Eigen 3.3
-  <li> Boost 1.55
-  <li> OMPL 1.4.0
-  <li> Klampt 0.6 (modified version github.com/aorthey/Klampt and
-  github.com/aorthey/KrisLibrary)
-</ul>
+- Eigen 3.3
+- Boost 1.55
+- OMPL 1.4.0
+- Klampt 0.6
+  (modified version github.com/aorthey/Klampt and github.com/aorthey/KrisLibrary)
 
+Above libraries will be installed by following Installation procedure.
 
-  sudo apt-get install g++-5 libboost1.55-all-dev libeigen3-dev
+### Installation
+#### 1. Run the pre-requirement install script
+```bash
+$ cd <orthoklampt>
+$ source pre-requirement.bash
+```
 
-<h3>Install</h3>
+#### 2. Build Libraries
+```bash
+$ cd <orthoklampt>/Library
+$ make -j`nproc` unpack-deps
+$ make -j`nproc` deps
+```
 
-      mkdir build
-      cd build
-      cmake ..
-      make -j10
-      ./planner_hierarchy ../data/experiments/06D_doubleLshape.xml
+#### 3. Build orthoklampt itself
+```bash
+$ cd <orthoklampt>
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j`nproc`
+$ sudo make install
+```
+
+### Execution
+```bash
+$ cd <orthokoampt>/build
+$ ./planner_hierarchy ../data/experiments/06D_doubleLshape.xml
+```
